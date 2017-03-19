@@ -1,0 +1,37 @@
+{
+  "name": "phone-number-format",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sodper/phone-number-format",
+  "author": {
+    "name": "Per Flitig",
+    "email": "per.flitig@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sodper/phone-number-format.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sodper/phone-number-format/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sodper/phone-number-format/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/phone-number-format",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1"
+  },
+  "keywords": []
+}
