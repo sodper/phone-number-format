@@ -1,6 +1,6 @@
 'use strict';
 
-var phone_number_format = require('../lib/phone-number-format.js');
+var formatter = require('../lib/phone-number-format.js');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -22,7 +22,7 @@ var phone_number_format = require('../lib/phone-number-format.js');
     test.ifError(value)
 */
 
-exports['awesome'] = {
+exports['phone-number-format-tests'] = {
   setUp: function(done) {
     // setup here
     done();
@@ -30,7 +30,7 @@ exports['awesome'] = {
   'no args': function(test) {
     test.expect(1);
     // tests here
-    test.equal(phone_number_format.awesome(), 'awesome', 'should be awesome.');
+    test.equal(formatter.format(), '', 'should return empty string.');
     test.done();
   },
 };
