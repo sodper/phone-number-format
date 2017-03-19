@@ -39,4 +39,10 @@ exports['phone-number-format-tests'] = {
     test.equal(formatter.format('22'), '22', 'should return "22"');
     test.done();
   },
+  '123456': function(test) {
+    test.expect(1);
+    // tests here
+    test.equal(formatter.format('123456'), '123-456', 'should return "123-456"');
+    test.done();
+  },
 };
