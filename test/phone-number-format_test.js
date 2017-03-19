@@ -33,4 +33,10 @@ exports['phone-number-format-tests'] = {
     test.equal(formatter.format(), '', 'should return empty string.');
     test.done();
   },
+  '22': function(test) {
+    test.expect(1);
+    // tests here
+    test.equal(formatter.format('22'), '22', 'should return "22"');
+    test.done();
+  },
 };
