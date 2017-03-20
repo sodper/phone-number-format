@@ -45,10 +45,14 @@ function createTest(input, expected) {
 
 createTest('', '');
 createTest('22', '22');
+createTest('123', '123');
+createTest('1234', '12-34');
+createTest('12345', '123-45');
 createTest('123456', '123-456');
 createTest('12 3456', '123-456');
 createTest('12  3456', '123-456');
 createTest('12-3456', '123-456');
 createTest(' 12--34 567', '123-45-67');
+createTest('070-245 23 43', '070-245-23-43');
 
 exports['phone-number-format-tests'] = formatTests;
