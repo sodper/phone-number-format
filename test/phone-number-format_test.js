@@ -49,5 +49,6 @@ createTest('123456', '123-456');
 createTest('12 3456', '123-456');
 createTest('12  3456', '123-456');
 createTest('12-3456', '123-456');
+createTest(' 12--34 567', '123-45-67');
 
 exports['phone-number-format-tests'] = formatTests;
