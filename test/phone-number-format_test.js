@@ -22,7 +22,7 @@ var formatter = require('../lib/phone-number-format.js');
     test.ifError(value)
 */
 
-exports['phone-number-format-tests'] = {
+var formatTests = {
   setUp: function(done) {
     // setup here
     done();
@@ -32,17 +32,19 @@ exports['phone-number-format-tests'] = {
     // tests here
     test.equal(formatter.format(), '', 'should return empty string.');
     test.done();
-  },
-  '22': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(formatter.format('22'), '22', 'should return "22"');
-    test.done();
-  },
-  '123456': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(formatter.format('123456'), '123-456', 'should return "123-456"');
-    test.done();
-  },
+  }
 };
+
+function createTest(input, expected) {
+  formatTests[input] = function(test) {
+    test.expect(1);
+    test.equal(formatter.format(input), expected);
+    test.done();
+  };
+}
+
+createTest('', '');
+createTest('22', '22');
+createTest('123456', '123-456');
+
+exports['phone-number-format-tests'] = formatTests;
