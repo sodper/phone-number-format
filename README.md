@@ -1,26 +1,21 @@
-# phone-number-format
+# Format Phone Number Excercise
 
-The best project ever.
+Given a string input S consisting of N digits, spaces and dashes, return a formatted string with digits in groups of three separated by dashes, e.g.
 
-## Getting Started
-Install the module with: `npm install phone-number-format`
-
-```javascript
-var phone_number_format = require('phone-number-format');
-phone_number_format.awesome(); // "awesome"
+```
+"123-456 78 90 12" -> "123-456-789-012"
 ```
 
-## Documentation
-_(Coming soon)_
+The formatted string may en with a group of two digits, but not with a single digit. In the single digit case, the formatted string should end with tvo 2-digit groups, i.e.
 
-## Examples
-_(Coming soon)_
+```
+"12 3456-7890" -> "123-456-78-90"
+```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+## Assumptions
 
-## Release History
-_(Nothing yet)_
+- The input S contains at least 2 digits.
+- N may be an integer such that 2 <= N <= 100 000 000 
 
 ## License
 Copyright (c) 2017 Per Flitig  
